@@ -1,6 +1,20 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
+
+/*
+|--------------------------------------------------------------------------
+| AutoLoad Custom Class From Library Directory
+|--------------------------------------------------------------------------
+|
+*/
+function __autoload($classname){
+	if(strpos($classname , "CI_") !== 0 ){
+		$file = APPPATH . 'libraries/' . $classname . '.php' ;
+		if(file_exists($file) && is_file($file) ) @include_once $file ;
+	}
+}
+
 /*
 |--------------------------------------------------------------------------
 | Base Site URL
@@ -29,7 +43,7 @@ $config['base_url'] = '';
 | variable so that it is blank.
 |
 */
-$config['index_page'] = 'index.php';
+$config['index_page'] = '';
 
 /*
 |--------------------------------------------------------------------------
@@ -71,7 +85,7 @@ $config['url_suffix'] = '';
 | than english.
 |
 */
-$config['language']	= 'english';
+$config['language']	= 'farsi';
 
 /*
 |--------------------------------------------------------------------------
@@ -211,7 +225,7 @@ $config['directory_trigger'] = 'd';
 | your log files will fill up very fast.
 |
 */
-$config['log_threshold'] = 0;
+$config['log_threshold'] = 4;
 
 /*
 |--------------------------------------------------------------------------
@@ -355,10 +369,10 @@ $config['encryption_key'] = 'qU3v6xwKxD8eVe51d9C180JXwgBG5V20';
 | except for 'cookie_prefix' and 'cookie_httponly', which are ignored here.
 |
 */
-$config['sess_driver'] = 'files';
-$config['sess_cookie_name'] = 'ci_session';
+$config['sess_driver'] = 'database';
+$config['sess_cookie_name'] = 'eprevmahgyofvna';
 $config['sess_expiration'] = 7200;
-$config['sess_save_path'] = NULL;
+$config['sess_save_path'] = 'sessions';
 $config['sess_match_ip'] = FALSE;
 $config['sess_time_to_update'] = 300;
 $config['sess_regenerate_destroy'] = FALSE;

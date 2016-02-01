@@ -60,7 +60,7 @@ $autoload['packages'] = array();
 |	$autoload['libraries'] = array('user_agent' => 'ua');
 */
 
-$autoload['libraries'] = array();
+$autoload['libraries'] = array('database' , 'form_validation' , 'session' );
 
 
 /*
@@ -88,7 +88,7 @@ $autoload['drivers'] = array();
 |	$autoload['helper'] = array('url', 'file');
 */
 
-$autoload['helper'] = array();
+$autoload['helper'] = array('url' , 'btform' , 'interface' , 'jdf' , 'my_lang' , 'my_form_validation' , 'my_text_input' , 'my_function');
 
 
 /*
@@ -104,7 +104,7 @@ $autoload['helper'] = array();
 |
 */
 
-$autoload['config'] = array();
+$autoload['config'] = array('rules');
 
 
 /*

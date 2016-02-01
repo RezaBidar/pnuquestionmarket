@@ -124,21 +124,24 @@ if ( ! function_exists('create_captcha'))
 
 		if (empty($word))
 		{
-			$word = '';
-			for ($i = 0, $mt_rand_max = strlen($pool) - 1; $i < $word_length; $i++)
+			$word = array();
+			for ($i = 0, $mt_rand_max = sizeof($pool) - 1; $i < $word_length; $i++)
 			{
-				$word .= $pool[mt_rand(0, $mt_rand_max)];
+				array_push($word ,$pool[mt_rand(0, $mt_rand_max)]);
 			}
+
+			
 		}
 		elseif ( ! is_string($word))
 		{
 			$word = (string) $word;
 		}
+		var_dump($pool);
 
 		// -----------------------------------
 		// Determine angle and position
 		// -----------------------------------
-		$length	= strlen($word);
+		$length	= sizeof($word);
 		$angle	= ($length >= 6) ? mt_rand(-($length-6), ($length-6)) : 0;
 		$x_axis	= mt_rand(6, (360/$length)-16);
 		$y_axis = ($angle >= 0) ? mt_rand($img_height, $img_width) : mt_rand(6, $img_height);
@@ -217,8 +220,12 @@ if ( ! function_exists('create_captcha'))
 			else
 			{
 				$y = mt_rand($img_height / 2, $img_height - 3);
+
 				imagettftext($im, $font_size, $angle, $x, $y, $colors['text'], $font_path, $word[$i]);
+				// imagettftext($im, $font_size, $angle, $x, $y, $colors['text'], $font_path, 'شیرششرضض');
+				
 				$x += $font_size;
+				var_dump($word[$i]);
 			}
 		}
 

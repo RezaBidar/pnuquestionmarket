@@ -1,0 +1,177 @@
+@font-face {
+    font-family: faTitr;
+    src: url('../fonts/b-titr-bold.ttf');
+    font-weight: bold;
+}
+
+body{
+ 	background-color: #AEC7C7 ;
+ 	font-family : tahoma ;
+}
+
+#page-wrapper{
+	background-color: #AEC7C7 ;
+	margin-bottom: 20px ;
+}
+
+.container input[type="submit"]{
+	margin-bottom : 50px;
+}
+
+.side-nav>li>ul {
+	background-color: darkslategrey ;
+}
+
+.glyphicon-plus-sign{
+	color : green ;
+	text-shadow : 0px 0px 1px green ;
+}
+.glyphicon-edit{
+	color : darkorange ;
+	text-shadow : 0px 0px 1px black ;
+}
+
+.glyphicon-th-list{
+	color : darkslateblue;
+	text-shadow : 0px 0px 1px blue ;
+}
+
+h3,h2,h1{
+	font-family : faTitr ;
+	text-shadow : 0px 0px 1px #6D6C6C ;
+}
+
+.radio_button  button.active {
+	background-color: orange ;
+}
+
+
+/* TinyMCE specific rules */
+.mce-content-body  {
+   background: #FFF !important;
+   font-size: 14px !important ;
+}
+
+table.dataTable{
+	background-color: white ;
+}
+
+/**
+ * for table 
+ * classes set in my_table library 
+ */
+.enter_icon{
+	font-size: 22px;
+}
+.edit_icon{
+	color: darkgoldenrod;
+	font-size: 22px;
+}
+.remove_icon{
+	color: red;
+	font-size: 22px;
+}
+.info_icon{
+	color: lightblue;
+	font-size: 22px;
+}
+
+/**
+ * for data table
+ */
+.datatable tbody tr:hover {
+	background-color: #31C7C7 !important ;
+}
+.datatable tbody td:hover{
+	background-color: #3DDADA !important ;
+ }
+
+ .alert-answer{
+ 	  color: #0B5631;
+    background-color: #B1EFAD;
+    border-color: #13511D;
+ }
+
+/* loading style start */
+   /*
+	 *  Usage:
+	 *
+	 *    <div class="sk-spinner sk-spinner-rotating-plane"></div>
+	 *
+	 */
+.sk-spinner-rotating-plane.sk-spinner {
+  width: 50px;
+  height: 50px;
+  background-color: #400080;
+  margin: 0 auto;
+	position: absolute;
+    top: 50%;
+    left: 50%;
+  -webkit-animation: sk-rotatePlane 1.2s infinite ease-in-out;
+          animation: sk-rotatePlane 1.2s infinite ease-in-out;
+	z-index : 3 ; 
+}
+
+@-webkit-keyframes sk-rotatePlane {
+  0% {
+    -webkit-transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+            transform: perspective(120px) rotateX(0deg) rotateY(0deg); }
+
+  50% {
+    -webkit-transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
+            transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg); }
+
+  100% {
+    -webkit-transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+            transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg); } }
+
+@keyframes sk-rotatePlane {
+  0% {
+    -webkit-transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+            transform: perspective(120px) rotateX(0deg) rotateY(0deg); }
+
+  50% {
+    -webkit-transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
+            transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg); }
+
+  100% {
+    -webkit-transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+            transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg); 
+	} 
+}
+
+#overlay {
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background: rgba(255, 255 , 255 , 0.7);
+	z-index : 10001;  
+}
+
+/* loading style end */
+
+
+/*panel purple*/
+.panel-purple{
+  border-color : purple;
+}
+
+.panel-purple > .panel-heading {
+  border-color : purple;
+  background-color : purple;
+  color : white;
+}
+
+.panel-purple > a {
+  color : purple;
+}
+
+a.navbar-brand{
+  color : white !important;
+}
+
+a.navbar-brand:hover{
+  color : yellow !important;
+}
