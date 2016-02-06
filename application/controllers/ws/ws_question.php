@@ -89,4 +89,5 @@ class ws_question extends CI_Controller{
 
 		$this->load->view('test', $data);
 	}
+
 }
